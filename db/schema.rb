@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_15_141645) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_15_142324) do
   create_table "discounts", force: :cascade do |t|
     t.string "discount_name"
     t.datetime "expiry_date"
@@ -54,6 +54,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_15_141645) do
     t.float "total_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "state"
   end
 
   create_table "pizza_ingredients", force: :cascade do |t|
