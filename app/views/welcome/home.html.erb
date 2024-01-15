@@ -1,2 +1,9 @@
-<h1>Welcome#home</h1>
-<p>Find me in app/views/welcome/home.html.erb</p>
+<h1>Welcome to my solution for Pizza Challenge</h1>
+
+<%= link_to 'All Orders', orders_path %>
+<br><br>
+<%= link_to 'Create New Order', new_order_path %>
+<br><br>
+<%= link_to 'All Completed Orders', orders_path, state: 'completed'  %>
+<br><br>
+<%= link_to 'All Pending Orders', orders_path, state: 'pending' %>
