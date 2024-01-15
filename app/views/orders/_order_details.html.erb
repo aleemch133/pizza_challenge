@@ -1,0 +1,17 @@
+<h4>ID: <%= order.order_id %></h4>
+
+<p>Created: <%= order.created_at.strftime("%B %e, %Y %H:%M") %></p>
+<p>Promotion Codes: <%= order.discounts.any? ? 'present' : '-' rescue '--'%></p>
+<p>Discount Codes: <%= order.discounts.any? ? 'present' : '-' rescue '--' %></p>
+<br>
+<h5>Items:</h5>
+<% order.order_items.each do |item| %>
+  <ul><%= "#{item&.pizza&.pizza_name}(#{item&.size})" %></ul>
+<% end %>
+
+
+
+<br>
+<p>Total Price: $<%= order.total_price %></p>
+
+<hr>
